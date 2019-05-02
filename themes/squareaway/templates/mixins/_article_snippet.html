@@ -1,0 +1,15 @@
+<div class="box-lower">
+  {% if article.image_src %}
+
+  <a href="{{ article.url }}"><img src="{{ article.metadata['image_src'] }}" alt="" class="snippet-image" /></a>
+  {% endif %}
+
+  <a href="{{ article.url }}">
+    <h2 class="subtitle">{{ article.title }}</h2>
+  </a>
+  <p>{{ article.content | truncate(200, True) }}</p>
+  <ul class="contact">
+    <li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+    <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+  </ul>
+</div>

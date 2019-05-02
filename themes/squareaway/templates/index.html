@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="page-wrapper">
+{% if articles[0].image_src %}
+	<div id="banner" class="container"><a href="{{ articles[0].url }}"><img src="{{ articles[0].metadata['image_src'] }}"
+				alt="{{ articles[0].metadata['image_title'] }}" class="featured-image" /></a>
+	</div>
+
+{% endif %}
+	<div id="featured" class="container">
+		<div class="box">
+			<a href="{{ articles[0].url }}">
+				<div class="title">
+					<h2>{{ articles[0].title }}</h2>
+				</div>
+			</a>
+			<p class="snippet-text">{{ articles[0].content | truncate(300, True) }}</p>
+		</div>
+		{% for article in articles[1:] %}
+		{% include "mixins/_article_snippet.html" %}
+
+		{% endfor %}
+	<div id="page" class="container">
+		<div id="content">
+			<div class="title">
+				<h2>Welcome <span class="byline">to our website</span></h2>
+			</div>
+			<p>This is <strong>SquareAway</strong>, a free, fully standards-compliant CSS template designed by <a
+					href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a
+					href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a
+					href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to
+				do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
+			<a href="#" class="button icon icon-arrow-right">Learn More</a>
+		</div>
+		{# <div id="sidebar"><a href="#"><img src="images/pic05.jpg" width="588" height="250" alt="" /></a></div> #}
+	</div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+
+<div id="footer-wrapper">
+	<div id="footer" class="container">
+		<div id="fbox1">
+			<h2>Maecenas luctus</h2>
+			<p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Duis pretium velit ac mauris. Proin eu
+				wisi suscipit nulla suscipit interdum.</p>
+			<a href="#" class="button icon icon-arrow-right">Learn More</a>
+		</div>
+		<div id="fbox2">
+			<h2>Integer gravida</h2>
+			<p>Proin eu wisi suscipit nulla suscipit interdum. Nullam non wisi a sem semper eleifend. Donec mattis libero
+				eget urna. Duis pretium velit ac mauris.</p>
+			<a href="#" class="button icon icon-arrow-right">Learn More</a>
+		</div>
+		<div id="fbox3">
+			<h2>Praesent scelerisque</h2>
+			<p>Donec mattis libero eget urna. Duis pretium velit ac mauris. Proin eu wisi suscipit nulla suscipit interdum.
+				Nullam non wisi a sem semper eleifend.</p>
+			<a href="#" class="button icon icon-arrow-right">Learn More</a>
+		</div>
+		<div id="fbox4">
+			<h2>Etiam rhoncus volutpat</h2>
+			<p>Donec mattis libero eget urna. Duis pretium velit ac mauris. Proin eu wisi suscipit nulla suscipit interdum.
+				Nullam non wisi a sem semper eleifend.</p>
+			<a href="#" class="button icon icon-arrow-right">Learn More</a>
+		</div>
+	</div>
+</div>
+
+{% endblock footer %}

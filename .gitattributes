@@ -1,1 +1,2 @@
 static/jose-morales-571859-unsplash.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text

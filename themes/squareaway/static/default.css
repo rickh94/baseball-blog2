@@ -6,7 +6,7 @@
 
 	body {
 		margin: 0px;
-		padding: 0 10px;
+		padding: 0px;
 		background: #EFEFEF url({{SITEURL}}/images/bg01.png) repeat;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 10pt;

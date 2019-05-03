@@ -11,7 +11,14 @@ SITESUBTITLE = "A companion blog to a non-existent baseball team"
 SITEURL = os.environ.get("SITEURL", "")
 THEME = "themes/future-imperfect"
 
-FEATURED_CATEGORY = "Weird Rules"
+SHORT_DESCRIPTION = (
+    "This is a static site generated with pelican hosted on netlify. "
+    "It will use netlify cms to get all the speed and ease of a static site, "
+    "but with some of the flexibility and dynamic content of a cms."
+)
+
+FEATURED_CATEGORY1 = "Weird Rules"
+FEATURED_CATEGORY2 = "Recaps"
 
 PATH = "content"
 

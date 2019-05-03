@@ -1,0 +1,9 @@
+<ul class="stats">
+  <li><a href="{{ article.category.url }}">{{ article.category.name }}</a></li>
+  <li>
+    {% for tag in article.tags %}
+    <a href="{{ tag.url }}" class="icon fa-tag">{{ tag.name }}</a>
+
+    {% endfor %}
+  </li>
+</ul>

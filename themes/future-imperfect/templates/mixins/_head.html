@@ -1,4 +1,10 @@
-<title>Baseball Blog</title>
+<title>{{ SITENAME }}</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="/theme/css/main.css" />
+{% assets filters="node-scss,cssmin", output="css/style.min.css", "sass/main.scss" %}
+<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+{% endassets %}
+{# <link rel="stylesheet" href="/theme/css/main.css" /> #}
+{# {% assets filters="cssmin", output="css/style.min.css", "css/main.css", "css/font-awesome.min.css" %}
+<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+{% endassets %} #}

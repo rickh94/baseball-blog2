@@ -8,6 +8,10 @@ verify_ssl = true
 [packages]
 pelican = "*"
 markdown = "*"
+webassets = "*"
+cssmin = "*"
+pyscss = "*"
+jsmin = "*"
 
 [requires]
 python_version = "3.7"

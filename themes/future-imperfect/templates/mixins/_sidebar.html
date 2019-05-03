@@ -2,10 +2,10 @@
 
   <!-- Intro -->
   <section id="intro">
-    <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+    <a href="/index.html" class="logo"><img src="images/logo2.png" alt="" /></a>
     <header>
-      <h2>Future Imperfect</h2>
-      <p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+      <h2>{{ SITENAME }}</h2>
+      <p>{{ SITESUBTITLE }}</p>
     </header>
   </section>
 
@@ -13,46 +13,24 @@
   <section>
     <div class="mini-posts">
 
-      <!-- Mini Post -->
+      {% for article in articles %}
+      {% if article.category.name == FEATURED_CATEGORY %}
       <article class="mini-post">
         <header>
-          <h3><a href="single.html">Vitae sed condimentum</a></h3>
-          <time class="published" datetime="2015-10-20">October 20, 2015</time>
-          <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
+          {# <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a> #}
         </header>
-        <a href="single.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
+        {% if article.metadata.get('image_src', None) %}
+        <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}" alt="{{ article.metadata.get('image_title', '')}}" 
+        style="max-height: 15rem;"/></a>
+        
+        {% endif %}
       </article>
 
-      <!-- Mini Post -->
-      <article class="mini-post">
-        <header>
-          <h3><a href="single.html">Rutrum neque accumsan</a></h3>
-          <time class="published" datetime="2015-10-19">October 19, 2015</time>
-          <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-        </header>
-        <a href="single.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
-      </article>
+      {% endif %}
 
-      <!-- Mini Post -->
-      <article class="mini-post">
-        <header>
-          <h3><a href="single.html">Odio congue mattis</a></h3>
-          <time class="published" datetime="2015-10-18">October 18, 2015</time>
-          <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-        </header>
-        <a href="single.html" class="image"><img src="images/pic06.jpg" alt="" /></a>
-      </article>
-
-      <!-- Mini Post -->
-      <article class="mini-post">
-        <header>
-          <h3><a href="single.html">Enim nisl veroeros</a></h3>
-          <time class="published" datetime="2015-10-17">October 17, 2015</time>
-          <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-        </header>
-        <a href="single.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
-      </article>
-
+      {% endfor %}
     </div>
   </section>
 
@@ -118,6 +96,6 @@
     </ul>
   </section>
 
-{% include "mixins/_footer.html" %}
+  {% include "mixins/_footer.html" %}
 
 </section>

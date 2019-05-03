@@ -34,12 +34,19 @@
 
     {% endblock footer %}
   </div>
-
   <script src="/theme/js/jquery.min.js"></script>
   <script src="/theme/js/browser.min.js"></script>
   <script src="/theme/js/breakpoints.min.js"></script>
+  {% assets filters="jsmin", output="js/util.js", "js/util.js" %}
+  <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+  {% endassets %}
+
+  {% assets filters="jsmin", output="js/main.js", "js/main.js" %}
+  <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+  {% endassets %}
+  {# 
   <script src="/theme/js/util.js"></script>
-  <script src="/theme/js/main.js"></script>
+  <script src="/theme/js/main.js"></script> #}
   {% block scripts %}
 
   {% endblock scripts %}

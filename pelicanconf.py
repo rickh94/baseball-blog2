@@ -6,12 +6,12 @@ import os
 AUTHOR = "Rick Henry"
 SITENAME = "Baseball Blog"
 SITEURL = os.environ.get('SITEURL', '')
-THEME = "themes/squareaway"
+THEME = "themes/future-imperfect"
 
 PATH = "content"
 
 TIMEZONE = "America/New_York"
-DEFAULT_DATE_FORMAT = '%B %e %Y'
+DEFAULT_DATE_FORMAT = '%B %d, %Y'
 
 DEFAULT_LANG = "en"
 

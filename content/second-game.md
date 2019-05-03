@@ -4,6 +4,7 @@ Category: Recaps
 Tags: recaps, disappoinment
 image_src: images/tim-gouw-124468-unsplash.jpg
 image_title: stadium
+Subtitle: You can't win 'em all
 
 Well it was exciting! Unfortunately, the bullpen couldn't hang on to the 9-4 lead and ended the game 11-9 for the loss.
 Offense was very much still there, but a couple relievers roughed up and there went the game.

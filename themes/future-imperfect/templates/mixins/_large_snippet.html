@@ -1,0 +1,34 @@
+<article class="post">
+  <header>
+    <div class="title">
+      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+      {% if article.metadata.get('subtitle', None) %}
+      <p>{{ article.metadata.get('subtitle') }}</p>
+      {% endif %}
+    </div>
+    <div class="meta">
+      <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
+      <a href="{{ article.author.url }}" class="author"><span class="name">{{ article.author.name }}</span></a>
+    </div>
+  </header>
+  {% if article.metadata.get('image_src', None) %}
+  <a href="{{ article.url }}" class="image featured"><img src="{{ article.image_src }}"
+      alt="{{ article.image_title }}" /></a>
+
+  {% endif %}
+  <p>{{ article.content | truncate(200, True) }}</p>
+  <footer>
+    <ul class="actions">
+      <li><a href="{{ article.url }}" class="button large">Continue Reading</a></li>
+    </ul>
+    <ul class="stats">
+      <li><a href="{{ article.category.url }}">{{ article.category.name }}</a></li>
+      <li>
+        {% for tag in article.tags %}
+        <a href="{{ tag.url }}" class="icon fa-tag">{{ tag.name }}</a>
+
+        {% endfor %}
+      </li>
+    </ul>
+  </footer>
+</article>

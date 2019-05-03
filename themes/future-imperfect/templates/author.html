@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="main">
+<h2>Author: {{ author.name }}</h2>
+	{% for article in articles %}
+	{% include "mixins/_large_snippet.html" %}
+
+	{% endfor %}
+</div>
+
+{% endblock content %}
+
+{% block sidebar %}
+
+{% set articles = all_articles %}
+{% include "mixins/_sidebar.html" %}
+
+{% endblock sidebar %}

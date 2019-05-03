@@ -1,1 +1,41 @@
 {% extends "base.html" %}
+
+{% block content %}
+
+<div id="main">
+
+  <!-- Post -->
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2>{{ page.title }}</h2>
+        {% if page.metadata.get('subtitle', None) %}
+        <p>{{ page.metadata['subtitle'] }}</p>
+        {% endif %}
+      </div>
+    </header>
+
+    {% if page.metadata.get('image_src', None) %}
+    <span class="image featured"><img src="{{SITEURL}}/{{ page.metadata.get('image_src') }}"
+        alt="{{ page.metadata.get('image_title') }}" style="max-height: 60vh;" /></span>
+
+    {% endif %}
+    <p>
+      {{ SHORT_DESCRIPTION }}
+    </p>
+
+    <p>
+      {{ page.content }}
+    </p>
+  </article>
+
+</div>
+
+
+
+{% endblock content %}
+
+{% block sidebar %}
+{% include "mixins/_sidebar.html" %}
+
+{% endblock sidebar %}

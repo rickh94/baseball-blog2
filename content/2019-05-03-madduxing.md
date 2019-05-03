@@ -1,10 +1,12 @@
+---
 title: Madduxing
 subtitle: A complete game shutout in fewer than 100 pitches
 author: Rick Henry
 date: 2019-05-03T21:32:37.096Z
 image_src: /images/zelle-duda-1435573-unsplash.jpg
 category: Around the League
-tags: 'ace, pitching, history, shutout'
+tags: ace, pitching, history, shutout
+---
   Basically all the Aces have been struggling this year. The balls have been
   flying out of the ballpark, breaking pitches are flat, and they feel like they
   can't get a good grip on the baseball.

@@ -1,3 +1,4 @@
+---
 title: The Infield Fly Rule
 date: 2019-04-08
 category: Weird Rules
@@ -5,6 +6,7 @@ author: Anonymous Umpire
 tags: rules, explanation, infield fly, defense
 image_src: images/francisco-gonzalez-606139-unsplash.jpg
 image_title: Infield
+---
 
 Many people do not understand the infield fly rule. This makes sense, it is confusing. The important thing to know
 is that it is to prevent a trick double-play that is basically un-defendable by the runnner on second.

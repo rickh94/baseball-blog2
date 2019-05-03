@@ -12,18 +12,18 @@
   <section>
     <ul class="links">
       <li>
-        <a href="/categories">
+        <a href="{{SITEURL}}/categories">
           <h3>Categories</h3>
         </a>
       </li>
       <li>
-        <a href="/tags">
+        <a href="{{SITEURL}}/tags">
           <h3>Tags</h3>
         </a>
       </li>
       {% for page in pages %}
       <li>
-        <a href="{{ page.url }}">
+        <a href="{{SITEURL}}/{{ page.url }}">
           <h3>{{ page.title }}</h3>
           <p>{{ page.content | truncate(40) }}</p>
         </a>

@@ -14,12 +14,12 @@
 			</div>
 			<div class="meta">
 				<time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
-				<a href="{{ article.author.url }}" class="author"><span class="name">{{ article.author.name }}</span></a>
+				<a href="{{SITEURL}}/{{ article.author.url }}" class="author"><span class="name">{{ article.author.name }}</span></a>
 			</div>
 		</header>
 
 		{% if article.metadata.get('image_src', None) %}
-		<span class="image featured"><img src="{{ article.metadata.get('image_src') }}"
+		<span class="image featured"><img src="{{SITEURL}}/{{ article.metadata.get('image_src') }}"
 				alt="{{ article.metadata.get('image_title') }}" style="max-height: 60vh;" /></span>
 
 		{% endif %}

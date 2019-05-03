@@ -3,11 +3,16 @@
 {% block content %}
 <div id="main">
   <h2>Categories</h2>
+  <section style="margin-bottom: 1rem;">
+    {% for category in categories %}
+    <a href="#{{ category[0].slug }}" class="icon fa-folder-open" style="margin-right: 0.5vw;">&nbsp;{{ category[0].name }}</a>
+    {% endfor %}
+  </section>
   {% for category in categories %}
-  <article class="post">
+  <article class="post" id="{{ category[0].slug }}">
     <header>
       <div class="title">
-        <h2><a href="{{ category[0].url }}">{{ category[0].name }}</a></h2>
+        <h2><a href="{{SITEURL}}/{{ category[0].url }}">{{ category[0].name }}</a></h2>
       </div>
     </header>
     <ul class="posts">
@@ -15,11 +20,11 @@
       <li>
         <article>
           <header>
-            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <h3><a href="{{SITEURL}}/{{ article.url }}">{{ article.title }}</a></h3>
             <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
           </header>
           {% if article.metadata.get('image_src', None) %}
-          <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}"
+          <a href="{{SITEURL}}/{{ article.url }}" class="image"><img src="{{SITEURL}}/{{ article.metadata.get('image_src') }}"
               alt="{{ article.metadata.get('image_title', '')}}" /></a>
 
           {% endif %}
@@ -29,7 +34,7 @@
     </ul>
     <footer>
       <ul class="actions">
-        <li><a href="{{ category[0].url }}" class="button large">Read More</a></li>
+        <li><a href="{{SITEURL}}/{{ category[0].url }}" class="button large">Read More</a></li>
       </ul>
     </footer>
   </article>

@@ -48,7 +48,7 @@ SOCIAL = (("You can add links in your config file", "#"), ("Another social link"
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = STAGE == "dev"
+RELATIVE_URLS = False
 
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["sitemap", "assets"]

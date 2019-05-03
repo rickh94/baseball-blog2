@@ -2,7 +2,7 @@
 
   <!-- Intro -->
   <section id="intro">
-    <a href="/index.html" class="logo"><img src="images/logo2.png" alt="" /></a>
+    <a href="{{SITEURL}}" class="logo"><img src="{{SITEURL}}/images/logo2.png" alt="" /></a>
     <header>
       <h2>{{ SITENAME }}</h2>
       <p>{{ SITESUBTITLE }}</p>
@@ -18,12 +18,12 @@
       {% if article.category.name == FEATURED_CATEGORY1 %}
       <article class="mini-post">
         <header>
-          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          <h3><a href="{{SITEURL}}/{{ article.url }}">{{ article.title }}</a></h3>
           <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
           {# <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a> #}
         </header>
         {% if article.metadata.get('image_src', None) %}
-        <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}"
+        <a href="{{SITEURL}}/{{ article.url }}" class="image"><img src="{{SITEURL}}/{{ article.metadata.get('image_src') }}"
             alt="{{ article.metadata.get('image_title', '')}}" style="max-height: 15rem;" /></a>
 
         {% endif %}
@@ -44,11 +44,11 @@
       <li>
         <article>
           <header>
-            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <h3><a href="{{SITEURL}}/{{ article.url }}">{{ article.title }}</a></h3>
             <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
           </header>
           {% if article.metadata.get('image_src', None) %}
-          <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}"
+          <a href="{{SITEURL}}/{{ article.url }}" class="image"><img src="{{SITEURL}}/{{ article.metadata.get('image_src') }}"
               alt="{{ article.metadata.get('image_title', '')}}" /></a>
 
           {% endif %}
@@ -63,7 +63,7 @@
           <h2>About</h2>
           <p>{{ SHORT_DESCRIPTION }}</p>
           <ul class="actions">
-            <li><a href="#" class="button">Learn More</a></li>
+            <li><a href="{{SITEURL}}/about" class="button">Learn More</a></li>
           </ul>
         </section>
 

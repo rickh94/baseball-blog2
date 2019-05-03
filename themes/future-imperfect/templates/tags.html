@@ -12,7 +12,7 @@
   <article class="post" id="{{ tag[0].slug }}">
     <header>
       <div class="title">
-        <h2><a href="{{ tag[0].url }}">{{ tag[0].name }}</a></h2>
+        <h2><a href="{{SITEURL}}/{{ tag[0].url }}">{{ tag[0].name }}</a></h2>
       </div>
     </header>
     <ul class="posts">
@@ -20,11 +20,11 @@
       <li>
         <article>
           <header>
-            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <h3><a href="{{SITEURL}}/{{ article.url }}">{{ article.title }}</a></h3>
             <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
           </header>
           {% if article.metadata.get('image_src', None) %}
-          <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}"
+          <a href="{{SITEURL}}/{{ article.url }}" class="image"><img src="{{SITEURL}}/{{ article.metadata.get('image_src') }}"
               alt="{{ article.metadata.get('image_title', '')}}" /></a>
 
           {% endif %}
@@ -34,7 +34,7 @@
     </ul>
     <footer>
       <ul class="actions">
-        <li><a href="{{ tag[0].url }}" class="button large">Read More</a></li>
+        <li><a href="{{SITEURL}}/{{ tag[0].url }}" class="button large">Read More</a></li>
       </ul>
     </footer>
   </article>

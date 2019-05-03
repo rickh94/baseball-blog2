@@ -1,18 +1,18 @@
 <article class="post">
   <header>
     <div class="title">
-      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+      <h2><a href="{{SITEURL}}/{{ article.url }}">{{ article.title }}</a></h2>
       {% if article.metadata.get('subtitle', None) %}
       <p>{{ article.metadata.get('subtitle') }}</p>
       {% endif %}
     </div>
     <div class="meta" style="text-align: right;">
       <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
-      <a href="{{ article.author.url }}" class="author"><span class="name">{{ article.author.name }}</span></a>
+      <a href="{{SITEURL}}/{{ article.author.url }}" class="author"><span class="name">{{ article.author.name }}</span></a>
     </div>
   </header>
   {% if article.metadata.get('image_src', None) %}
-  <a href="{{ article.url }}" class="image featured" style="max-height: 30rem;"><img src="{{ article.image_src }}"
+  <a href="{{SITEURL}}/{{ article.url }}" class="image featured" style="max-height: 30rem;"><img src="{{SITEURL}}/{{ article.metadata['image_src'] }}"
       alt="{{ article.image_title }}" /></a>
 
   {% endif %}

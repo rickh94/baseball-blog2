@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="main">
+<h2>Tag: {{ tag.name }}</h2>
+	{% for article in articles %}
+	{% include "mixins/_large_snippet.html" %}
+
+	{% endfor %}
+</div>
+
+{% endblock content %}
+
+{% block sidebar %}
+{% include "mixins/_sidebar.html" %}
+
+{% endblock sidebar %}

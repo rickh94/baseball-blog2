@@ -1,11 +1,11 @@
 <header id="header">
-  <h1><a href="index.html">{{ SITENAME }}</a></h1>
+  <h1><a href="{{SITEURL}}">{{ SITENAME }}</a></h1>
   <nav class="links">
     <ul>
-      <li><a href="/categories">Categories</a></li>
-      <li><a href="/tags">Tags</a></li>
+      <li><a href="{{SITEURL}}/categories">Categories</a></li>
+      <li><a href="{{SITEURL}}/tags">Tags</a></li>
       {% for page in pages %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      <li><a href="{{SITEURL}}/{{ page.url }}">{{ page.title }}</a></li>
       {% endfor %}
     </ul>
   </nav>

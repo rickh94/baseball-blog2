@@ -16,6 +16,6 @@
       alt="{{ article.image_title }}" /></a>
 
   {% endif %}
-  <p>{{ article.content | truncate(300, True) |striptags }}</p>
+  <p>{{ article.content | truncate(300) |striptags }}</p>
   {% include "mixins/_article_footer.html" %}
 </article>

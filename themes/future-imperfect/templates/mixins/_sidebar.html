@@ -11,8 +11,8 @@
 
   <!-- Mini Posts -->
   <section>
-    <div class="mini-posts">
     <h3>Featured: {{ FEATURED_CATEGORY1 }}</h3>
+    <div class="mini-posts">
 
       {% for article in articles %}
       {% if article.category.name == FEATURED_CATEGORY1 %}
@@ -23,9 +23,9 @@
           {# <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a> #}
         </header>
         {% if article.metadata.get('image_src', None) %}
-        <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}" alt="{{ article.metadata.get('image_title', '')}}" 
-        style="max-height: 15rem;"/></a>
-        
+        <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}"
+            alt="{{ article.metadata.get('image_title', '')}}" style="max-height: 15rem;" /></a>
+
         {% endif %}
       </article>
 
@@ -37,41 +37,36 @@
 
   <!-- Posts List -->
   <section>
-  <h3>Featured: {{ FEATURED_CATEGORY2 }}</h3>
+    <h3>Featured: {{ FEATURED_CATEGORY2 }}</h3>
     <ul class="posts">
-    {% for article in articles %}
-    {% if article.category.name == FEATURED_CATEGORY2 %}
+      {% for article in articles %}
+      {% if article.category.name == FEATURED_CATEGORY2 %}
       <li>
         <article>
           <header>
             <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
             <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
           </header>
-        {% if article.metadata.get('image_src', None) %}
-        <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}" alt="{{ article.metadata.get('image_title', '')}}" 
-        /></a>
-        
-        {% endif %}
+          {% if article.metadata.get('image_src', None) %}
+          <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}"
+              alt="{{ article.metadata.get('image_title', '')}}" /></a>
+
+          {% endif %}
         </article>
       </li>
-    
-    {% endif %}
-    
-    {% endfor %}
-      <li
-    </ul>
+
+      {% endif %}
+
+      {% endfor %}
+      <li </ul> </section> <!-- About -->
+        <section class="blurb">
+          <h2>About</h2>
+          <p>{{ SHORT_DESCRIPTION }}</p>
+          <ul class="actions">
+            <li><a href="#" class="button">Learn More</a></li>
+          </ul>
+        </section>
+
+        {% include "mixins/_footer.html" %}
+
   </section>
-
-
-  <!-- About -->
-  <section class="blurb">
-    <h2>About</h2>
-    <p>{{ SHORT_DESCRIPTION }}</p>
-    <ul class="actions">
-      <li><a href="#" class="button">Learn More</a></li>
-    </ul>
-  </section>
-
-  {% include "mixins/_footer.html" %}
-
-</section>

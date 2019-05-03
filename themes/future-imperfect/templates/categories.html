@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="main">
+  <h2>Categories</h2>
+  {% for category in categories %}
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2><a href="{{ category[0].url }}">{{ category[0].name }}</a></h2>
+      </div>
+    </header>
+    <ul class="posts">
+      {% for article in category[1][:3] %}
+      <li>
+        <article>
+          <header>
+            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <time class="published" datetime="{{ article.date }}">{{ article.date.strftime('%B %d, %Y') }}</time>
+          </header>
+          {% if article.metadata.get('image_src', None) %}
+          <a href="{{ article.url }}" class="image"><img src="{{ article.metadata.get('image_src') }}"
+              alt="{{ article.metadata.get('image_title', '')}}" /></a>
+
+          {% endif %}
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+    <footer>
+      <ul class="actions">
+        <li><a href="{{ category[0].url }}" class="button large">Read More</a></li>
+      </ul>
+    </footer>
+  </article>
+
+  {% endfor %}
+  </ul>
+</div>
+
+
+{% endblock content %}
+{% block sidebar %}
+{% include "mixins/_sidebar.html" %}
+
+{% endblock sidebar %}

@@ -12,37 +12,32 @@
   <section>
     <ul class="links">
       <li>
-        <a href="#">
-          <h3>Lorem ipsum</h3>
-          <p>Feugiat tempus veroeros dolor</p>
+        <a href="/categories">
+          <h3>Categories</h3>
         </a>
       </li>
       <li>
-        <a href="#">
-          <h3>Dolor sit amet</h3>
-          <p>Sed vitae justo condimentum</p>
+        <a href="/tags">
+          <h3>Tags</h3>
         </a>
       </li>
+      {% for page in pages %}
       <li>
-        <a href="#">
-          <h3>Feugiat veroeros</h3>
-          <p>Phasellus sed ultricies mi congue</p>
+        <a href="{{ page.url }}">
+          <h3>{{ page.title }}</h3>
+          <p>{{ page.content | truncate(40) }}</p>
         </a>
       </li>
-      <li>
-        <a href="#">
-          <h3>Etiam sed consequat</h3>
-          <p>Porta lectus amet ultricies</p>
-        </a>
-      </li>
+      
+      {% endfor %}
     </ul>
   </section>
 
   <!-- Actions -->
-  <section>
+  {# <section>
     <ul class="actions stacked">
       <li><a href="#" class="button large fit">Log In</a></li>
     </ul>
-  </section>
+  </section> #}
 
 </section>

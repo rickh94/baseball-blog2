@@ -8,7 +8,10 @@ public_folder: "/images"
 collections:
   - name: "posts"
     label: "posts"
-    folder: "content/images"
+    folder: "content"
+    create: true
+    format: frontmatter
+    extension: md
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template", name: "template", widget: "hidden", default: "article"}

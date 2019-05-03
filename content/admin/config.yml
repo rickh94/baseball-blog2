@@ -21,5 +21,5 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Image", name: "image_src", widget: "image"}
       - {label: "Category", name: "category", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}

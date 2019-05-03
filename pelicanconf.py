@@ -57,7 +57,9 @@ SITEMAP = {"format": "xml"}
 sass_style = "expanded" if STAGE == "dev" else "compressed"
 
 ASSET_CONFIG = (
-    ("SASS_STYLE", sass_style),
-    ("SASS_LINE_COMMENTS", ""),
-    ("SASS_BIN", "/usr/bin/sass"),
 )
+
+STATIC_PATHS = ['admin']
+
+PAGE_EXCLUDES = ['admin']
+ARTICLE_EXCLUDES = ['admin']

@@ -1,9 +1,9 @@
-Title: May Day Baseball
-Subtitle: A Nice Win after a Bad Loss
-Author: Part-time Mascot
-Date: 2019-05-01
-Category: Recaps
-Tags: recaps, small ball, bullpen, ace, homers
+title: May Day Baseball
+subtitle: A Nice Win after a Bad Loss
+author: Part-time Mascot
+date: 2019-05-01
+category: Recaps
+tags: recaps, small ball, bullpen, ace, homers
 
 Even when they're struggling, staff aces make the team feel like they can win.
 Today is no exception, though he pitched fairly well, if not deep into the game, 

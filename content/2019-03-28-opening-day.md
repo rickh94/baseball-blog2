@@ -1,8 +1,8 @@
-Title: Opening Day
-Subtitle: Baseball's Back!
-Date: 2019-03-28
-Category: Recaps
-Tags: recaps, dingers, homers, ace
+title: Opening Day
+subtitle: Baseball's Back!
+date: 2019-03-28
+category: Recaps
+tags: recaps, dingers, homers, ace
 image_src: images/jose-morales-571859-unsplash.jpg
 image_title: Baseballs
 

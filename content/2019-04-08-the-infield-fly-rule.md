@@ -1,8 +1,8 @@
-Title: The Infield Fly Rule
-Date: 2019-04-08
-Category: Weird Rules
-Author: Anonymous Umpire
-Tags: rules, explanation, infield fly, defense
+title: The Infield Fly Rule
+date: 2019-04-08
+category: Weird Rules
+author: Anonymous Umpire
+tags: rules, explanation, infield fly, defense
 image_src: images/francisco-gonzalez-606139-unsplash.jpg
 image_title: Infield
 

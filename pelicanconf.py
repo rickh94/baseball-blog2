@@ -59,7 +59,7 @@ sass_style = "expanded" if STAGE == "dev" else "compressed"
 ASSET_CONFIG = (
 )
 
-STATIC_PATHS = ['admin']
+STATIC_PATHS = ['admin', 'images']
 
 PAGE_EXCLUDES = ['admin']
 ARTICLE_EXCLUDES = ['admin']

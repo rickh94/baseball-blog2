@@ -2,5 +2,26 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 {% assets filters="node-scss,cssmin", output="css/style.min.css", "sass/main.scss" %}
-  <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
 {% endassets %}
+
+{% if article is defined %}
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{SITEURL}}/{{article.url}}" />
+<meta property="og:title" content="{{ article.title | replace('"', '&quot;') }}" />
+<meta property="og:description"
+  content="{{ article.content | striptags | replace('"', '&quot;') | truncate(196, False, '...') }}" />
+
+{% elif page is defined %}
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{SITEURL}}/{{page.url}}" />
+<meta property="og:title" content="{{ SITENAME }} | {{ page.title | replace('"', '&quot;') }}" />
+<meta property="og:description" content="{{ page.content | striptags | replace('"', '&quot;') | truncate(196, False, '...') }}" />
+
+{% else %}
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{SITEURL}}/{{output_file}}" />
+<meta property="og:title" content="{{ SITENAME }}" />
+<meta property="og:description" content="{{ SHORT_DESCRIPTION }}" />
+
+{% endif %}

@@ -6,7 +6,6 @@ category: Recaps
 tags: recaps, dingers, homers, ace
 image_src: images/jose-morales-571859-unsplash.jpg
 image_title: Baseballs
-status: draft
 ---
 
 He wasn't cruising, but he kept them in the game long enough for the offense to win the game.

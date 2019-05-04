@@ -13,6 +13,7 @@ collections:
     create: true
     format: yaml-frontmatter
     extension: md
+    preview_path: "{{slug}}"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - label: "Template"

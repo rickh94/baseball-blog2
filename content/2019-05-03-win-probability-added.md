@@ -4,6 +4,7 @@ title: Win Probability Added
 subtitle: A statistic for clutch hitting
 author: Rick Henry
 date: 2019-05-04T03:03:04.904Z
+image_src: /images/ruari-bell-534942-unsplash.jpg
 category: Recaps
 tags: 'wpa, homers, recaps, win, offense, lefty reliever'
 ---

@@ -7,12 +7,12 @@ public_folder: "/images"
 
 collections:
   - name: "posts"
-    label: "Blog Post"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
     folder: "content"
     create: true
     format: yaml-frontmatter
     extension: md
-    sort: "date:desc"
     preview_path: "drafts/{{slug}}"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -27,6 +27,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
+    label_singular: "Page"
     folder: "content/pages"
     create: true
     format: yaml-frontmatter

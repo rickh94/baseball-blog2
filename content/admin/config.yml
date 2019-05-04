@@ -42,7 +42,7 @@ collections:
         widget: "string"
       - label: "Tags"
         name: "tags"
-        widget: "text"
+        widget: "string"
         required: false
       - label: "Body"
         name: "body"

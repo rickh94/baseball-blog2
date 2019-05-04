@@ -63,3 +63,6 @@ STATIC_PATHS = ['admin', 'images']
 
 PAGE_EXCLUDES = ['admin']
 ARTICLE_EXCLUDES = ['admin']
+
+ARTICLE_URL = '{date:%Y-%m-%d}-{slug}'
+ARTICLE_SAVE_AS = '{date:%Y-%m-%d}-{slug}.html'

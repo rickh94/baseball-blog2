@@ -13,6 +13,7 @@ collections:
     format: yaml-frontmatter
     extension: md
     sort: "date:desc"
+    preview_path: "drafts/{{slug}}"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template", name: "template", widget: "hidden", default: "article"}

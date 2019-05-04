@@ -3,3 +3,6 @@ build:
 
 serve:
     pipenv run pelican -lr
+
+clean:
+    rm -rf output

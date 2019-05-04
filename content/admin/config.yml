@@ -12,6 +12,7 @@ collections:
     create: true
     format: yaml-frontmatter
     extension: md
+    sort: "date:desc"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template", name: "template", widget: "hidden", default: "article"}
@@ -22,4 +23,22 @@ collections:
       - {label: "Image", name: "image_src", widget: "image"}
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Tags", name: "tags", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    format: yaml-frontmatter
+    extension: md
+    sort: "date:desc"
+    slug: "{{slug}}"
+    fields:
+      - label: "Template"
+        name: "template"
+        widget: "select"
+        options: ["article", "page", "about"]
+        default: "page"
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Image", name: "image_src", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

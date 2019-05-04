@@ -32,7 +32,6 @@ collections:
     create: true
     format: yaml-frontmatter
     extension: md
-    sort: "date:desc"
     slug: "{{slug}}"
     fields:
       - label: "Template"
@@ -40,7 +39,9 @@ collections:
         widget: "select"
         options: ["article", "page", "about"]
         default: "page"
-      - {label: "Title", name: "title", widget: "string"}
+      - label: "Title" 
+        name: "title"
+        widget: "string"
       - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Image", name: "image_src", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

@@ -1,5 +1,5 @@
 [build]
-  command = "pelican content"
+  command = "./build.sh"
   functions = "functions"
   publish = "output"
   environment = {STAGE = "prod", SITEURL = "https://heuristic-jepsen-3cc5a1.netlify.com"}

@@ -51,7 +51,7 @@ DEFAULT_PAGINATION = False
 RELATIVE_URLS = False
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["sitemap", "assets"]
+PLUGINS = ["sitemap", "assets", "tipue_search.tipue_search"]
 SITEMAP = {"format": "xml"}
 
 sass_style = "expanded" if STAGE == "dev" else "compressed"

@@ -24,9 +24,11 @@
 
     {% endblock menu %}
 
-    {% block content %}
+    <div id="tipue_search_content">
+      {% block content %}
 
-    {% endblock content %}
+      {% endblock content %}
+    </div>
     {% block sidebar %}
 
     {% endblock sidebar %}
@@ -37,13 +39,28 @@
   <script src="{{SITEURL}}/theme/js/jquery.min.js"></script>
   <script src="{{SITEURL}}/theme/js/browser.min.js"></script>
   <script src="{{SITEURL}}/theme/js/breakpoints.min.js"></script>
-  {% assets filters="jsmin", output="js/util.js", "js/util.js" %}
+  <script src="{{SITEURL}}/tipuesearch_content.js"></script>
+  {% assets filters="uglifyjs", output="js/tipuesearch_set.js", "js/tipuesearch_set.js" %}
+  <script src="{{SIETURL}}/{{ASSET_URL}}"></script>
+  {% endassets %}
+
+  <script src="{{SITEURL}}/theme/js/tipuesearch.min.js"></script>
+
+  {% assets filters="uglifyjs", output="js/util.min.js", "js/util.js" %}
   <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
   {% endassets %}
 
-  {% assets filters="jsmin", output="js/main.js", "js/main.js" %}
+  {% assets filters="uglifyjs", output="js/main.min.js", "js/main.js" %}
   <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
   {% endassets %}
+
+  <script>
+    $(document).ready(function () {
+      $('#tipue_search_input').tipuesearch({
+        showURL: false
+      })
+    })
+  </script>
   {% block scripts %}
 
   {% endblock scripts %}

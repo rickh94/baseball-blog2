@@ -1,6 +1,10 @@
 <title>{{ SITENAME }}</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+{# {% assets filters="cssmin", output="css/tipuesearch.min.css", "css/tipuesearch.css" %}
+<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+{% endassets %} #}
+
 {% assets filters="node-scss,cssmin", output="css/style.min.css", "sass/main.scss" %}
 <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
 {% endassets %}
